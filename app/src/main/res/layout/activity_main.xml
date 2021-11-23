@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/conTop"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_arrow_back" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/conHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:foregroundGravity="center_horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/txtPayment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Payment history "
+                android:textColor="#191919"
+                android:textSize="18sp"
+                app:layout_constraintRight_toLeftOf="@+id/txtPaymentNum"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtPaymentNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:text="(12)"
+                android:textColor="#AEAEAE"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txtPayment"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="82dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/relDec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txtDec"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginBottom="18dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="December "
+                    android:textColor="#191919"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txtDecNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/txtDec"
+                    android:layout_marginStart="0dp"
+                    android:layout_toEndOf="@+id/txtDec"
+                    android:fontFamily="@font/roboto"
+                    android:text="(2)"
+                    android:textColor="#AEAEAE"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recDec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:id="@+id/relNov"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txtNov"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginBottom="18dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="November "
+                    android:textColor="#191919"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txtNovNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/txtNov"
+                    android:layout_marginStart="0dp"
+                    android:layout_toEndOf="@+id/txtNov"
+                    android:fontFamily="@font/roboto"
+                    android:text="(2)"
+                    android:textColor="#AEAEAE"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recNov"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <RelativeLayout
+                android:id="@+id/relOct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txtOct"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginBottom="18dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="October "
+                    android:textColor="#191919"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txtOctNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/txtOct"
+                    android:layout_marginStart="0dp"
+                    android:layout_toEndOf="@+id/txtOct"
+                    android:fontFamily="@font/roboto"
+                    android:text="(2)"
+                    android:textColor="#AEAEAE"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recOct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:id="@+id/relSep"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txtSep"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginBottom="18dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="September "
+                    android:textColor="#191919"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txtSepNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/txtSep"
+                    android:layout_marginStart="0dp"
+                    android:layout_toEndOf="@+id/txtSep"
+                    android:fontFamily="@font/roboto"
+                    android:text="(2)"
+                    android:textColor="#AEAEAE"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recSep"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <RelativeLayout
+                android:id="@+id/relAug"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txtAug"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginBottom="18dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="August "
+                    android:textColor="#191919"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txtAugNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/txtAug"
+                    android:layout_marginStart="0dp"
+                    android:layout_toEndOf="@+id/txtAug"
+                    android:fontFamily="@font/roboto"
+                    android:text="(2)"
+                    android:textColor="#AEAEAE"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recAug"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <RelativeLayout
+                android:id="@+id/relJul"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txtJul"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginBottom="18dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="July "
+                    android:textColor="#191919"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txtJulNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/txtJul"
+                    android:layout_marginStart="0dp"
+                    android:layout_toEndOf="@+id/txtJul"
+                    android:fontFamily="@font/roboto"
+                    android:text="(2)"
+                    android:textColor="#AEAEAE"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recJul"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <RelativeLayout
+                android:id="@+id/relJun"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txtJun"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginBottom="18dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="June "
+                    android:textColor="#191919"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txtJunNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/txtJun"
+                    android:layout_marginStart="0dp"
+                    android:layout_toEndOf="@+id/txtJun"
+                    android:fontFamily="@font/roboto"
+                    android:text="(2)"
+                    android:textColor="#AEAEAE"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recJun"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <RelativeLayout
+                android:id="@+id/relMay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txtMay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginBottom="18dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="May "
+                    android:textColor="#191919"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txtMayNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/txtMay"
+                    android:layout_marginStart="0dp"
+                    android:layout_toEndOf="@+id/txtMay"
+                    android:fontFamily="@font/roboto"
+                    android:text="(2)"
+                    android:textColor="#AEAEAE"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recMay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <RelativeLayout
+                android:id="@+id/relApr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txtApr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginBottom="18dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="April "
+                    android:textColor="#191919"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txtAprNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/txtApr"
+                    android:layout_marginStart="0dp"
+                    android:layout_toEndOf="@+id/txtApr"
+                    android:fontFamily="@font/roboto"
+                    android:text="(2)"
+                    android:textColor="#AEAEAE"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recApr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <RelativeLayout
+                android:id="@+id/relMar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txtMar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginBottom="18dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="March "
+                    android:textColor="#191919"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txtMarNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/txtMar"
+                    android:layout_marginStart="0dp"
+                    android:layout_toEndOf="@+id/txtMar"
+                    android:fontFamily="@font/roboto"
+                    android:text="(2)"
+                    android:textColor="#AEAEAE"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recMar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <RelativeLayout
+                android:id="@+id/relFeb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txtFeb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginBottom="18dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="February"
+                    android:textColor="#191919"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txtFebNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/txtFeb"
+                    android:layout_marginStart="0dp"
+                    android:layout_toEndOf="@+id/txtFeb"
+                    android:fontFamily="@font/roboto"
+                    android:text="(2)"
+                    android:textColor="#AEAEAE"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recFeb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:id="@+id/relJan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txtJan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginBottom="18dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="January"
+                    android:textColor="#191919"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txtJanNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/txtJan"
+                    android:layout_marginStart="0dp"
+                    android:layout_toEndOf="@+id/txtJan"
+                    android:fontFamily="@font/roboto"
+                    android:text="(2)"
+                    android:textColor="#AEAEAE"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recJan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
